@@ -1,4 +1,4 @@
-all:
+compile:
 	sudo make -C dwl clean install
 	sudo make -C someblocks clean install
 	make -C dwl clean

@@ -1,3 +1,7 @@
+set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
+
+@all: packages config compile
+
 @config:
 	rsync -aqh .vimrc ~/
 	rsync -aqh .zshrc ~/
@@ -12,10 +16,6 @@
 	sudo make -C .dev/someblocks clean install
 	make -C .dev/dwl clean
 	make -C .dev/someblocks clean
-
-@kill:
-	pkill someblocks
-	pkill dwl
 
 @packages:
 	sudo apt-get -y -qq update && sudo apt-get -y -qq full-upgrade

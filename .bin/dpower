@@ -1,5 +1,5 @@
 #!/bin/sh
-choice=`/usr/bin/echo -e "Lock\nReboot\nShutdown" | dmenu`
+choice=`/usr/bin/echo -e "Lock\nReboot\nShutdown" | wmenu`
 
 echo $choice
 

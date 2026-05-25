@@ -42,6 +42,8 @@ static const Env envs[] = {
   { "QT_WAYLAND_DISABLE_WINDOWDECORATION", "1" }, //
   { "QT_AUTO_SCREEN_SCALE_FACTOR", "1" },         //
   { "MOZ_ENABLE_WAYLAND", "1" },                  //
+  { "WAYLAND_DISPLAY", "wayland-0" },             //
+  { "DISPLAY", ":0" },                            //
   { "GDK_SCALE", "1" },                           //
   { "_JAVA_AWT_WM_NONREPARENTING", "1" },         //
 };

@@ -1,0 +1,1306 @@
+Conversation avec Gemini
+
+sous sway et wayland, je n' arrive pas pas capturer mes bureau malgr'e l' installation de xdg-desktop-portal et piewire et wireplumberdebug: Found portal inhibitor
+
+debug: Attempted path: /usr/bin/../share/obs/obs-studio/locale/en-US.ini
+
+debug: Attempted path: /usr/bin/../share/obs/obs-studio/locale.ini
+
+debug: Attempted path: /usr/bin/../share/obs/obs-studio/locale/fr-FR.ini
+
+info: Using preferred locale 'fr-FR'
+
+debug: Attempted path: /usr/bin/../share/obs/obs-studio/themes
+
+debug: Attempted path: /usr/bin/../share/obs/obs-studio/themes/
+
+warning: Get on org.freedesktop.portal.Settings returned an invalid reply
+
+info: Command Line Arguments: --verbose
+
+info: Platform: Wayland
+
+info: CPU Name: Intel(R) Core(TM) i3-4150T CPU @ 3.00GHz
+
+info: CPU Speed: 2993.392MHz
+
+info: Physical Cores: 2, Logical Cores: 4
+
+info: Physical Memory: 3827MB Total, 2975MB Free
+
+info: Kernel Version: Linux 6.12.90+deb13-amd64
+
+info: Distribution: "Debian GNU/Linux" "13"
+
+info: Session Type: wayland
+
+info: Qt Version: 6.8.2 (runtime), 6.8.2 (compiled)
+
+info: Portable mode: false
+
+info: OBS 30.2.3.1-3 (linux)
+
+info: ---------------------------------
+
+info: ---------------------------------
+
+info: audio settings reset:
+
+    samples per sec: 48000
+
+    speakers:        2
+
+    max buffering:   960 milliseconds
+
+    buffering type:  dynamically increasing
+
+info: ---------------------------------
+
+info: Initializing OpenGL...
+
+info: Using EGL/Wayland
+
+info: Initialized EGL 1.5
+
+debug: Supported EGL Extensions: EGL_ANDROID_blob_cache EGL_ANDROID_native_fence_sync EGL_EXT_buffer_age EGL_EXT_config_select_group EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_EXT_present_opaque EGL_EXT_query_reset_notification_strategy EGL_EXT_surface_compression EGL_EXT_swap_buffers_with_damage EGL_IMG_context_priority EGL_KHR_cl_event2 EGL_KHR_config_attribs EGL_KHR_context_flush_control EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image_base EGL_KHR_no_config_context EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_drm_image EGL_MESA_gl_interop EGL_MESA_image_dma_buf_export EGL_MESA_query_driver EGL_MESA_x11_native_visual_id EGL_WL_bind_wayland_display EGL_WL_create_wayland_buffer_from_image 
+
+info: Loading up OpenGL on adapter Intel Mesa Intel(R) HD Graphics 4400 (HSW GT2)
+
+info: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 25.0.7-2, shading language 4.60
+
+info: ---------------------------------
+
+info: video settings reset:
+
+    base resolution:   1280x1024
+
+    output resolution: 1024x818
+
+    downscale filter:  Bicubic
+
+    fps:               30/1
+
+    format:            NV12
+
+    YUV mode:          Rec. 709/Partial
+
+info: NV12 texture support enabled
+
+info: P010 texture support not available
+
+info: Audio monitoring device:
+
+    name: Par défaut
+
+    id: default
+
+info: ---------------------------------
+
+debug: ---------------------------------
+
+debug: Loading module: decklink-captions.so
+
+warning: Failed to load 'en-US' text for module: 'decklink-captions.so'
+
+debug: ---------------------------------
+
+debug: Loading module: decklink-output-ui.so
+
+warning: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+
+debug: ---------------------------------
+
+debug: Loading module: decklink.so
+
+warning: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+
+warning: Failed to initialize module 'decklink.so'
+
+debug: ---------------------------------
+
+debug: Loading module: frontend-tools.so
+
+debug: ---------------------------------
+
+debug: Loading module: image-source.so
+
+debug: ---------------------------------
+
+debug: Loading module: linux-alsa.so
+
+debug: ---------------------------------
+
+debug: Loading module: linux-capture.so
+
+debug: ---------------------------------
+
+debug: Loading module: linux-jack.so
+
+debug: ---------------------------------
+
+debug: Loading module: linux-pipewire.so
+
+info: [pipewire] No capture sources available
+
+debug: ---------------------------------
+
+debug: Loading module: linux-pulseaudio.so
+
+debug: ---------------------------------
+
+debug: Loading module: linux-v4l2.so
+
+warning: v4l2loopback not installed, virtual camera not registered
+
+debug: ---------------------------------
+
+debug: Loading module: obs-ffmpeg.so
+
+debug: VAAPI: Initializing display in vaapi_device_h264_supported
+
+debug: Libva: VA-API version 1.22.0
+
+debug: Libva: Trying to open /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so
+
+debug: Libva: Found init function __vaDriverInit_1_22
+
+debug: Libva error: /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so init failed
+
+debug: Libva: va_openDriver() returns 1
+
+debug: Libva: Trying to open /usr/lib/x86_64-linux-gnu/dri/i965_drv_video.so
+
+debug: Libva: Found init function __vaDriverInit_1_22
+
+debug: Libva: va_openDriver() returns 0
+
+debug: VAAPI: Display initialized
+
+info: VAAPI: API version 1.22
+
+debug: VAAPI: 'Intel i965 driver for Intel(R) Haswell - 2.4.1' in use for device '/dev/dri/renderD128'
+
+debug: '/dev/dri/renderD128' support encoding with VAProfileH264ConstrainedBaseline
+
+debug: '/dev/dri/renderD128' support encoding with VAProfileH264Main
+
+debug: '/dev/dri/renderD128' support encoding with VAProfileH264High
+
+info: FFmpeg VAAPI H264 encoding supported
+
+debug: VAAPI: Initializing display in vaapi_device_av1_supported
+
+debug: Libva: VA-API version 1.22.0
+
+debug: Libva: Trying to open /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so
+
+debug: Libva: Found init function __vaDriverInit_1_22
+
+debug: Libva error: /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so init failed
+
+debug: Libva: va_openDriver() returns 1
+
+debug: Libva: Trying to open /usr/lib/x86_64-linux-gnu/dri/i965_drv_video.so
+
+debug: Libva: Found init function __vaDriverInit_1_22
+
+debug: Libva: va_openDriver() returns 0
+
+debug: VAAPI: Display initialized
+
+debug: VAAPI: 'Intel i965 driver for Intel(R) Haswell - 2.4.1' in use for device '/dev/dri/renderD128'
+
+debug: VAAPI: VAProfileAV1Profile0 is not supported by the device '/dev/dri/renderD128'
+
+debug: VAAPI: VAProfileAV1Profile0 is not supported by the device '/dev/dri/renderD128'
+
+info: FFmpeg VAAPI AV1 encoding not supported
+
+debug: VAAPI: Initializing display in vaapi_device_hevc_supported
+
+debug: Libva: VA-API version 1.22.0
+
+debug: Libva: Trying to open /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so
+
+debug: Libva: Found init function __vaDriverInit_1_22
+
+debug: Libva error: /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so init failed
+
+debug: Libva: va_openDriver() returns 1
+
+debug: Libva: Trying to open /usr/lib/x86_64-linux-gnu/dri/i965_drv_video.so
+
+debug: Libva: Found init function __vaDriverInit_1_22
+
+debug: Libva: va_openDriver() returns 0
+
+debug: VAAPI: Display initialized
+
+debug: VAAPI: 'Intel i965 driver for Intel(R) Haswell - 2.4.1' in use for device '/dev/dri/renderD128'
+
+debug: VAAPI: VAProfileHEVCMain is not supported by the device '/dev/dri/renderD128'
+
+debug: VAAPI: VAProfileHEVCMain10 is not supported by the device '/dev/dri/renderD128'
+
+debug: VAAPI: VAProfileHEVCMain is not supported by the device '/dev/dri/renderD128'
+
+debug: VAAPI: VAProfileHEVCMain10 is not supported by the device '/dev/dri/renderD128'
+
+info: FFmpeg VAAPI HEVC encoding not supported
+
+debug: ---------------------------------
+
+debug: Loading module: obs-filters.so
+
+debug: ---------------------------------
+
+debug: Loading module: obs-outputs.so
+
+debug: ---------------------------------
+
+debug: Loading module: obs-transitions.so
+
+debug: ---------------------------------
+
+debug: Loading module: obs-websocket.so
+
+info: [obs-websocket] [obs_module_load] you can haz websockets (Version: 5.5.2 | RPC Version: 1)
+
+info: [obs-websocket] [obs_module_load] Qt version (compile-time): 6.8.2 | Qt version (run-time): 6.8.2
+
+info: [obs-websocket] [obs_module_load] Linked ASIO Version: 103002
+
+debug: [obs-websocket] [Config::Save] Saved config.
+
+info: [obs-websocket] [obs_module_load] Module loaded.
+
+debug: ---------------------------------
+
+debug: Loading module: obs-x264.so
+
+debug: ---------------------------------
+
+debug: Loading module: rtmp-services.so
+
+debug: ---------------------------------
+
+debug: Loading module: text-freetype2.so
+
+debug: ---------------------------------
+
+debug: Loading module: vlc-video.so
+
+info: [vlc-video]: VLC 3.0.23 Vetinari found, VLC video source enabled
+
+info: ---------------------------------
+
+info:   Loaded Modules:
+
+info:     vlc-video.so
+
+info:     text-freetype2.so
+
+info:     rtmp-services.so
+
+info:     obs-x264.so
+
+info:     obs-websocket.so
+
+info:     obs-transitions.so
+
+info:     obs-outputs.so
+
+info:     obs-filters.so
+
+info:     obs-ffmpeg.so
+
+info:     linux-v4l2.so
+
+info:     linux-pulseaudio.so
+
+info:     linux-pipewire.so
+
+info:     linux-jack.so
+
+info:     linux-capture.so
+
+info:     linux-alsa.so
+
+info:     image-source.so
+
+info:     frontend-tools.so
+
+info:     decklink-output-ui.so
+
+info:     decklink-captions.so
+
+info: ---------------------------------
+
+info: ---------------------------------
+
+info: Available Encoders:
+
+info:   Video Encoders:
+
+info:     - ffmpeg_svt_av1 (SVT-AV1)
+
+info:     - ffmpeg_aom_av1 (AOM AV1)
+
+info:     - ffmpeg_vaapi_tex (FFmpeg VAAPI H.264)
+
+info:     - obs_x264 (x264)
+
+info:   Audio Encoders:
+
+info:     - ffmpeg_aac (FFmpeg AAC)
+
+info:     - ffmpeg_opus (FFmpeg Opus)
+
+info:     - ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+
+info:     - ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+
+info:     - ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+
+info:     - ffmpeg_alac (FFmpeg ALAC (24-bit))
+
+info:     - ffmpeg_flac (FFmpeg FLAC (16-bit))
+
+info: ==== Startup complete ===============================================
+
+debug: service 'default_service' (rtmp_common) created
+
+debug: encoder 'simple_video_stream' (obs_x264) created
+
+debug: Fallback encoder bitrates:
+
+     64 kbit/s:
+
+     96 kbit/s:
+
+    128 kbit/s:
+
+    160 kbit/s:
+
+    192 kbit/s:
+
+    224 kbit/s:
+
+    256 kbit/s:
+
+    288 kbit/s:
+
+    320 kbit/s:
+
+    352 kbit/s:
+
+    384 kbit/s:
+
+    416 kbit/s:
+
+    448 kbit/s:
+
+    480 kbit/s:
+
+    512 kbit/s:
+
+    544 kbit/s:
+
+    576 kbit/s:
+
+    608 kbit/s:
+
+    640 kbit/s:
+
+    672 kbit/s:
+
+    704 kbit/s:
+
+    736 kbit/s:
+
+    768 kbit/s:
+
+    800 kbit/s:
+
+    832 kbit/s:
+
+    864 kbit/s:
+
+    896 kbit/s:
+
+    928 kbit/s:
+
+    960 kbit/s:
+
+    992 kbit/s:
+
+    1024 kbit/s:
+
+debug: FFmpeg PCM (16-bit) (ffmpeg_pcm_s16le) encoder bitrates:
+
+     64 kbit/s
+
+     96 kbit/s
+
+    128 kbit/s
+
+    160 kbit/s
+
+    192 kbit/s
+
+    224 kbit/s
+
+    256 kbit/s
+
+    288 kbit/s
+
+    320 kbit/s
+
+    352 kbit/s
+
+    384 kbit/s
+
+    416 kbit/s
+
+    448 kbit/s
+
+    480 kbit/s
+
+    512 kbit/s
+
+    544 kbit/s
+
+    576 kbit/s
+
+    608 kbit/s
+
+    640 kbit/s
+
+    672 kbit/s
+
+    704 kbit/s
+
+    736 kbit/s
+
+    768 kbit/s
+
+    800 kbit/s
+
+    832 kbit/s
+
+    864 kbit/s
+
+    896 kbit/s
+
+    928 kbit/s
+
+    960 kbit/s
+
+    992 kbit/s
+
+    1024 kbit/s
+
+debug: FFmpeg PCM (24-bit) (ffmpeg_pcm_s24le) encoder bitrates:
+
+     64 kbit/s
+
+     96 kbit/s
+
+    128 kbit/s
+
+    160 kbit/s
+
+    192 kbit/s
+
+    224 kbit/s
+
+    256 kbit/s
+
+    288 kbit/s
+
+    320 kbit/s
+
+    352 kbit/s
+
+    384 kbit/s
+
+    416 kbit/s
+
+    448 kbit/s
+
+    480 kbit/s
+
+    512 kbit/s
+
+    544 kbit/s
+
+    576 kbit/s
+
+    608 kbit/s
+
+    640 kbit/s
+
+    672 kbit/s
+
+    704 kbit/s
+
+    736 kbit/s
+
+    768 kbit/s
+
+    800 kbit/s
+
+    832 kbit/s
+
+    864 kbit/s
+
+    896 kbit/s
+
+    928 kbit/s
+
+    960 kbit/s
+
+    992 kbit/s
+
+    1024 kbit/s
+
+debug: FFmpeg PCM (32-bit float) (ffmpeg_pcm_f32le) encoder bitrates:
+
+     64 kbit/s
+
+     96 kbit/s
+
+    128 kbit/s
+
+    160 kbit/s
+
+    192 kbit/s
+
+    224 kbit/s
+
+    256 kbit/s
+
+    288 kbit/s
+
+    320 kbit/s
+
+    352 kbit/s
+
+    384 kbit/s
+
+    416 kbit/s
+
+    448 kbit/s
+
+    480 kbit/s
+
+    512 kbit/s
+
+    544 kbit/s
+
+    576 kbit/s
+
+    608 kbit/s
+
+    640 kbit/s
+
+    672 kbit/s
+
+    704 kbit/s
+
+    736 kbit/s
+
+    768 kbit/s
+
+    800 kbit/s
+
+    832 kbit/s
+
+    864 kbit/s
+
+    896 kbit/s
+
+    928 kbit/s
+
+    960 kbit/s
+
+    992 kbit/s
+
+    1024 kbit/s
+
+debug: FFmpeg ALAC (24-bit) (ffmpeg_alac) encoder bitrates:
+
+     64 kbit/s
+
+     96 kbit/s
+
+    128 kbit/s
+
+    160 kbit/s
+
+    192 kbit/s
+
+    224 kbit/s
+
+    256 kbit/s
+
+    288 kbit/s
+
+    320 kbit/s
+
+    352 kbit/s
+
+    384 kbit/s
+
+    416 kbit/s
+
+    448 kbit/s
+
+    480 kbit/s
+
+    512 kbit/s
+
+    544 kbit/s
+
+    576 kbit/s
+
+    608 kbit/s
+
+    640 kbit/s
+
+    672 kbit/s
+
+    704 kbit/s
+
+    736 kbit/s
+
+    768 kbit/s
+
+    800 kbit/s
+
+    832 kbit/s
+
+    864 kbit/s
+
+    896 kbit/s
+
+    928 kbit/s
+
+    960 kbit/s
+
+    992 kbit/s
+
+    1024 kbit/s
+
+debug: FFmpeg FLAC (16-bit) (ffmpeg_flac) encoder bitrates:
+
+     64 kbit/s
+
+     96 kbit/s
+
+    128 kbit/s
+
+    160 kbit/s
+
+    192 kbit/s
+
+    224 kbit/s
+
+    256 kbit/s
+
+    288 kbit/s
+
+    320 kbit/s
+
+    352 kbit/s
+
+    384 kbit/s
+
+    416 kbit/s
+
+    448 kbit/s
+
+    480 kbit/s
+
+    512 kbit/s
+
+    544 kbit/s
+
+    576 kbit/s
+
+    608 kbit/s
+
+    640 kbit/s
+
+    672 kbit/s
+
+    704 kbit/s
+
+    736 kbit/s
+
+    768 kbit/s
+
+    800 kbit/s
+
+    832 kbit/s
+
+    864 kbit/s
+
+    896 kbit/s
+
+    928 kbit/s
+
+    960 kbit/s
+
+    992 kbit/s
+
+    1024 kbit/s
+
+debug: AAC simple encoder bitrate mapping:
+
+     64 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+     96 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    128 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    160 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    192 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    224 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    256 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    288 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    320 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    352 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    384 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    416 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    448 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    480 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    512 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    544 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    576 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    608 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    640 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    672 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    704 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    736 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    768 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    800 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    832 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    864 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    896 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    928 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    960 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    992 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+    1024 kbit/s: 'FFmpeg AAC' (ffmpeg_aac)
+
+debug: encoder 'simple_aac' (ffmpeg_aac) created
+
+debug: encoder 'simple_archive_audio' (ffmpeg_aac) created
+
+debug: output 'simple_file_output' (ffmpeg_muxer) created
+
+info: All scene data cleared
+
+info: ------------------------------------------------
+
+debug: private source 'Coupure' (cut_transition) created
+
+debug: private source 'Fondu' (fade_transition) created
+
+info: pulse-input: Server name: 'PulseAudio (on PipeWire 1.4.2) 15.0.0'
+
+debug: pulse-input: Default output device: 'alsa_output.pci-0000_00_1b.0.analog-stereo.monitor'
+
+info: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+
+info: pulse-input: Started recording from 'alsa_output.pci-0000_00_1b.0.analog-stereo.monitor' (default)
+
+debug: source 'Audio du bureau' (pulse_output_capture) created
+
+info: [Loaded global audio device]: 'Audio du bureau'
+
+info: pulse-input: Server name: 'PulseAudio (on PipeWire 1.4.2) 15.0.0'
+
+debug: pulse-input: Default input device: 'alsa_output.pci-0000_00_1b.0.analog-stereo.monitor'
+
+info: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+
+info: pulse-input: Started recording from 'alsa_output.pci-0000_00_1b.0.analog-stereo.monitor' (default)
+
+debug: source 'Mic/Aux' (pulse_input_capture) created
+
+info: [Loaded global audio device]: 'Mic/Aux'
+
+debug: source 'Scène' (scene) created
+
+info: Switched to scene 'Scène'
+
+info: ------------------------------------------------
+
+info: Loaded scenes:
+
+info: - scene 'Scène':
+
+info: ------------------------------------------------
+
+debug: Attempted path: /usr/bin/../share/obs/obs-studio/images/overflow.png
+
+info: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Audio du bureau)
+
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74803334 ns, expected 306153204514, input 306078401180
+
+info: adding 64 milliseconds of audio buffering, total audio buffering is now 85 milliseconds (source: Mic/Aux)
+
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77045847 ns, expected 306278401180, input 306355447027
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74857116 ns, expected 306430447027, input 306355589911
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74111938 ns, expected 306430589911, input 306504701849
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74877016 ns, expected 306579701849, input 306504824833
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74204926 ns, expected 306579824833, input 306654029759
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74874702 ns, expected 306729029759, input 306654155057
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74153293 ns, expected 306729155057, input 306803308350
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74812735 ns, expected 306878308350, input 306803495615
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74181925 ns, expected 306878495615, input 306952677540
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74874775 ns, expected 307027677540, input 306952802765
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77133181 ns, expected 307152802765, input 307229935946
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74873469 ns, expected 307304935946, input 307230062477
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74226545 ns, expected 307305062477, input 307379289022
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74849946 ns, expected 307454289022, input 307379439076
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74169752 ns, expected 307454439076, input 307528608828
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74872910 ns, expected 307603608828, input 307528735918
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74267592 ns, expected 307603735918, input 307678003510
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74861747 ns, expected 307753003510, input 307678141763
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=76466626 ns, expected 308028141763, input 308104608389
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74870503 ns, expected 308179608389, input 308104737886
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74234806 ns, expected 308179737886, input 308253972692
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74874504 ns, expected 308328972692, input 308254098188
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74192228 ns, expected 308329098188, input 308403290416
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74828422 ns, expected 308478290416, input 308403461994
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74134413 ns, expected 308478461994, input 308552596407
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74860225 ns, expected 308627596407, input 308552736182
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77212946 ns, expected 308752736182, input 308829949128
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74872091 ns, expected 308904949128, input 308830077037
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74218620 ns, expected 308905077037, input 308979295657
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74854914 ns, expected 309054295657, input 308979440743
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74169495 ns, expected 309054440743, input 309128610238
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74868332 ns, expected 309203610238, input 309128741906
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74223876 ns, expected 309203741906, input 309277965782
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74896962 ns, expected 309352965782, input 309278068820
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77185768 ns, expected 309478068820, input 309555254588
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74865427 ns, expected 309630254588, input 309555389161
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74181682 ns, expected 309630389161, input 309704570843
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74883630 ns, expected 309779570843, input 309704687213
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74309826 ns, expected 309779687213, input 309853997039
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74832999 ns, expected 309928997039, input 309854164040
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74132325 ns, expected 309929164040, input 310003296365
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74888303 ns, expected 310078296365, input 310003408062
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74190840 ns, expected 310078408062, input 310152598902
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74905887 ns, expected 310227598902, input 310152693015
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77224443 ns, expected 310352693015, input 310429917458
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74904516 ns, expected 310504917458, input 310430012942
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74222785 ns, expected 310505012942, input 310579235727
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74875338 ns, expected 310654235727, input 310579360389
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74220509 ns, expected 310654360389, input 310728580898
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74911161 ns, expected 310803580898, input 310728669737
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74244984 ns, expected 310803669737, input 310877914721
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74909829 ns, expected 310952914721, input 310878004892
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77197570 ns, expected 311078004892, input 311155202462
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74906698 ns, expected 311230202462, input 311155295764
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74214607 ns, expected 311230295764, input 311304510371
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74906362 ns, expected 311379510371, input 311304604009
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74225363 ns, expected 311379604009, input 311453829372
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74895875 ns, expected 311528829372, input 311453933497
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74250630 ns, expected 311528933497, input 311603184127
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74859042 ns, expected 311678184127, input 311603325085
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74154904 ns, expected 311678325085, input 311752479989
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74900023 ns, expected 311827479989, input 311752579966
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77248226 ns, expected 311952579966, input 312029828192
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74899543 ns, expected 312104828192, input 312029928649
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74238808 ns, expected 312104928649, input 312179167457
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74898209 ns, expected 312254167457, input 312179269248
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74212593 ns, expected 312254269248, input 312328481841
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74908905 ns, expected 312403481841, input 312328572936
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74265617 ns, expected 312403572936, input 312477838553
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74905730 ns, expected 312552838553, input 312477932823
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77214322 ns, expected 312677932823, input 312755147145
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74892428 ns, expected 312830147145, input 312755254717
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74223299 ns, expected 312830254717, input 312904478016
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74912409 ns, expected 312979478016, input 312904565607
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74222734 ns, expected 312979565607, input 313053788341
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74905248 ns, expected 313128788341, input 313053883093
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74269504 ns, expected 313128883093, input 313203152597
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74898395 ns, expected 313278152597, input 313203254202
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74258408 ns, expected 313278254202, input 313352512610
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74899599 ns, expected 313427512610, input 313352613011
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=76573132 ns, expected 313702613011, input 313779186143
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74886817 ns, expected 313854186143, input 313779299326
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=73471198 ns, expected 314004299326, input 314077770524
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74904436 ns, expected 314152770524, input 314077866088
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77242252 ns, expected 314277866088, input 314355108340
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74896404 ns, expected 314430108340, input 314355211936
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74204348 ns, expected 314430211936, input 314504416284
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74904648 ns, expected 314579416284, input 314504511636
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74322864 ns, expected 314579511636, input 314653834500
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74899657 ns, expected 314728834500, input 314653934843
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74171919 ns, expected 314728934843, input 314803106762
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74863048 ns, expected 314878106762, input 314803243714
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74269054 ns, expected 314878243714, input 314952512768
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74895095 ns, expected 315027512768, input 314952617673
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77140413 ns, expected 315152617673, input 315229758086
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74898528 ns, expected 315304758086, input 315229859558
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74245795 ns, expected 315304859558, input 315379105353
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74896557 ns, expected 315454105353, input 315379208796
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74227516 ns, expected 315454208796, input 315528436312
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74907757 ns, expected 315603436312, input 315528528555
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74248247 ns, expected 315603528555, input 315677776802
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74898070 ns, expected 315752776802, input 315677878732
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77256248 ns, expected 315877878732, input 315955134980
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74902140 ns, expected 316030134980, input 315955232840
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74321258 ns, expected 316030232840, input 316104554098
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74580837 ns, expected 316179554098, input 316104973261
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=73820718 ns, expected 316179973261, input 316253793979
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74902632 ns, expected 316328793979, input 316253891347
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74217926 ns, expected 316328891347, input 316403109273
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74863222 ns, expected 316478109273, input 316403246051
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74192871 ns, expected 316478246051, input 316552438922
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74906214 ns, expected 316627438922, input 316552532708
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=77292044 ns, expected 316752532708, input 316829824752
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74897302 ns, expected 316904824752, input 316829927450
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74256161 ns, expected 316904927450, input 316979183611
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74899006 ns, expected 317054183611, input 316979284605
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74185064 ns, expected 317054284605, input 317128469669
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74902400 ns, expected 317203469669, input 317128567269
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74257511 ns, expected 317203567269, input 317277824780
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=74899566 ns, expected 317352824780, input 317277925214
+
+debug: Audio timestamp for 'Mic/Aux' exceeded TS_SMOOTHING_THRESHOLD, diff=
+
+C'est un problème classique sous Wayland, et vos logs OBS Studio pointent très exactement vers la racine du problème.
+
+Dans votre rapport, on peut lire deux lignes cruciales :
+
+    warning: Get on org.freedesktop.portal.Settings returned an invalid reply : OBS ne parvient pas à communiquer correctement avec le système de portails.
+
+    info: [pipewire] No capture sources available : Le module PipeWire d'OBS se charge bien, mais il ne reçoit aucun flux vidéo de la part du portail de bureau.
+
+Sous Sway (qui est un compositeur basé sur wlroots), l'installation de xdg-desktop-portal seule ne suffit pas. Il lui faut un "backend" spécifique pour Sway/wlroots capable de faire le pont avec PipeWire.
+
+Voici comment résoudre ce problème étape par étape sur votre Debian 13 :
+1. Installer le backend manquant
+
+Vous devez installer xdg-desktop-portal-wlr (ou xdg-desktop-portal-gtk en complément pour certaines boîtes de dialogue), qui permet la capture d'écran sur les environnements basés sur wlroots comme Sway.
+
+Ouvrez un terminal et exécutez :
+Bash
+
+sudo apt update
+sudo apt install xdg-desktop-portal-wlr xdg-desktop-portal-gtk
+
+2. Configurer la sélection du portail (Important pour Debian 13)
+
+Depuis les versions récentes de xdg-desktop-portal, il est nécessaire de lui indiquer explicitement quel backend utiliser pour chaque environnement.
+
+Créez ou modifiez le fichier de configuration des portails pour Sway :
+Bash
+
+mkdir -p ~/.config/xdg-desktop-portal
+nano ~/.config/xdg-desktop-portal/sway-portals.conf
+
+(Vous pouvez remplacer nano par votre éditeur de texte favori).
+
+Ajoutez-y les lignes suivantes :
+Ini, TOML
+
+[preferred]
+default=wlr;gtk;
+org.freedesktop.impl.portal.ScreenCast=wlr
+org.freedesktop.impl.portal.Screenshot=wlr
+
+Sauvegardez et quittez. Cela force le système à utiliser le backend wlr spécifiquement pour la capture d'écran (ScreenCast) et les captures d'images (Screenshot).
+3. Assurer le chargement des variables d'environnement
+
+Pour que les portails s'activent correctement au lancement de Sway, ils ont besoin de savoir qu'ils sont dans une session Wayland et sous Sway.
+
+Ajoutez (ou vérifiez la présence de) cette ligne dans votre fichier de configuration Sway (généralement ~/.config/sway/config) :
+Plaintext
+
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+
+Cette commande met à jour l'environnement au niveau de systemd --user dès que Sway démarre.
+4. Redémarrer les services (ou votre session)
+
+Pour appliquer les changements sans redémarrer tout l'ordinateur, vous pouvez relancer les services de portails en exécutant ces commandes dans votre terminal :
+Bash
+
+systemctl --user stop xdg-desktop-portal
+systemctl --user stop xdg-desktop-portal-wlr
+systemctl --user start xdg-desktop-portal
+
+Note : Si cela ne suffit pas, fermez votre session Sway et reconnectez-vous.
+Comment tester dans OBS ?
+
+    Relancez OBS Studio.
+
+    Ajoutez une nouvelle source dans votre scène.
+
+    Vous devriez maintenant voir l'option Capture d'écran (PipeWire) (ou Screen Capture (PipeWire)).
+
+    En la sélectionnant, une fenêtre contextuelle (gérée par le portail) va s'ouvrir pour vous demander l'autorisation de partager votre écran ou une fenêtre spécifique. Une fois acceptée, la capture s'affichera instantanément.
+
+systemctl --user stop xdg-desktop-portalsystemctl --user stop xdg-desktop-portal-wlrsystemctl --user start xdg-desktop-portal
+
+Oups ! Attention, il y a une petite erreur de syntaxe dans votre commande : les deux premières commandes ont été collées ensemble (xdg-desktop-portalsystemctl).
+
+Si vous l'exécutez ainsi, votre terminal va renvoyer une erreur du type "command not found" ou "unit not found".
+
+Pour que le redémarrage des services fonctionne correctement, vous devez exécuter ces commandes séparément (en appuyant sur Entrée après chacune) ou les séparer avec des points-virgules.
+
+Voici la version corrigée à copier-coller dans votre terminal :
+Bash
+
+systemctl --user stop xdg-desktop-portal
+systemctl --user stop xdg-desktop-portal-wlr
+systemctl --user start xdg-desktop-portal
+
+💡 Astuce alternative
+
+Vous pouvez aussi tout faire en une seule ligne plus simple en utilisant restart :
+Bash
+
+systemctl --user restart xdg-desktop-portal-wlr xdg-desktop-portal
+
+Une fois cela fait, relancez OBS Studio et vérifiez si la source Capture d'écran (PipeWire) apparaît enfin.
+
+display doit etre a ?
+
+La variable $DISPLAY est un héritage de l'ancien serveur d'affichage X11.
+
+Sous un environnement moderne basé nativement sur Wayland (comme Sway), la variable la plus importante est en réalité $WAYLAND_DISPLAY.
+
+Voici ce que vous devez avoir et pourquoi :
+1. La variable principale : WAYLAND_DISPLAY
+
+Elle doit généralement être égale à wayland-0 (ou parfois wayland-1).
+C'est elle qui indique aux applications modernes (comme OBS version Wayland, Firefox, etc.) comment se connecter directement à Sway.
+2. La variable secondaire : DISPLAY
+
+Elle ressemble généralement à :0 ou :1.
+Sway utilise un outil appelé Xwayland pour faire tourner les anciennes applications qui ne comprennent pas encore Wayland. Xwayland crée un mini-serveur X11 virtuel, et $DISPLAY sert à cela.
+Comment vérifier leurs valeurs actuelles ?
+
+Dans votre terminal sous Sway, lancez :
+Bash
+
+echo $WAYLAND_DISPLAY
+echo $DISPLAY
+
+Si le terminal vous renvoie des lignes vides, c'est que vos variables ne sont pas transmises aux services de l'utilisateur (systemd --user), ce qui empêche le portail de capture d'écran de fonctionner.
+La solution automatique
+
+C'est précisément le rôle de la commande que nous avons ajoutée à votre configuration Sway à l'étape précédente :
+Plaintext
+
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+
+En arrière-plan, cette ligne ordonne à Sway de dire à systemd : "Hé, mon WAYLAND_DISPLAY est wayland-0 et mon DISPLAY est :0, mémorise-le pour les portails !"
+
+et avec dwl comment doit s'appeler sway-portals.conf
+
+Pour dwl (qui est l'équivalent de dwm mais pour Wayland, également basé sur wlroots), la logique reste exactement la même, mais le fichier de configuration doit être nommé en fonction de la variable XDG_CURRENT_DESKTOP définie par dwl.
+
+Par défaut, dwl s'identifie généralement avec le nom wlroots ou dwl. Le plus simple et le plus propre est de créer un fichier nommé portals.conf (sans préfixe). Ce fichier servira de configuration globale par défaut pour n'importe quel environnement Wayland que vous lancerez.
+
+Voici comment adapter la configuration pour dwl :
+1. Renommer ou créer le fichier
+
+Créez le fichier de configuration global dans votre dossier personnel :
+Bash
+
+nano ~/.config/xdg-desktop-portal/portals.conf
+
+Ajoutez-y exactement la même configuration :
+Ini, TOML
+
+[preferred]
+default=wlr;gtk;
+org.freedesktop.impl.portal.ScreenCast=wlr
+org.freedesktop.impl.portal.Screenshot=wlr
+
+2. Adapter le script de démarrage de dwl
+
+Contrairement à Sway qui possède un fichier config avec la commande exec, dwl se lance généralement via un script de démarrage (souvent nommé startdwl.sh ou directement dans votre .winit / .xprofile selon votre installation).
+
+Pour que le portail fonctionne, vous devez impérativement définir les variables et les importer juste avant de lancer dwl dans votre script.
+
+Voici à quoi doit ressembler votre script de lancement pour dwl :
+Bash
+
+#!/bin/sh
+
+# 1. On définit l'environnement pour wlroots/dwl
+export XDG_CURRENT_DESKTOP=wlroots
+export MOZ_ENABLE_WAYLAND=1
+
+# 2. On exporte ces variables dans le système de gestion de session (systemd/dbus)
+# C'est CRUCIAL pour que xdg-desktop-portal-wlr sache où regarder
+systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+# 3. On lance dwl
+exec dwl
+
+3. Redémarrer le portail
+
+Une fois le fichier portals.conf créé et votre session dwl relancée avec les bonnes variables, réappliquez le redémarrage du service :
+Bash
+
+systemctl --user restart xdg-desktop-portal-wlr xdg-desktop-portal
+
+Avec cette configuration "globale" (portals.conf) et la variable XDG_CURRENT_DESKTOP=wlroots, OBS Studio trouvera immédiatement le chemin pour capturer votre écran sous dwl.
+

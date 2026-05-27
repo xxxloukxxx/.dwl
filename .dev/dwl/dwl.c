@@ -1639,9 +1639,9 @@ drawbar(Monitor *m)
 				urg & 1 << i);
 		x += w;
 	}
-	w = TEXTW(m, m->ltsymbol);
-	drwl_setscheme(m->drw, colors[SchemeNorm]);
-	x = drwl_text(m->drw, x, 0, w, m->b.height, m->lrpad / 2, m->ltsymbol, 0);
+	/* w = TEXTW(m, m->ltsymbol); */
+	/* drwl_setscheme(m->drw, colors[SchemeNorm]); */
+	/* x = drwl_text(m->drw, x, 0, w, m->b.height, m->lrpad / 2, m->ltsymbol, 0); */
 
 	if ((w = m->b.width - (tw + x + traywidth)) > m->b.height) {
 		if (c) {
@@ -1654,6 +1654,9 @@ drawbar(Monitor *m)
 			drwl_rect(m->drw, x, 0, w, m->b.height, 1, 1);
 		}
 	}
+
+	drwl_setscheme(m->drw, colors[SchemeNorm]);
+	drwl_rect(m->drw, x, 0, w, m->b.height, 1, 1);
 
 	if (traywidth > 0) {
 		pixman_image_composite32(PIXMAN_OP_SRC,

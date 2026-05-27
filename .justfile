@@ -24,6 +24,7 @@ set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
 	sudo apt-get -y -qq install libxcb-screensaver0-dev libxcb-shape0-dev libxcb-shm0-dev libxcb-sync-dev libxcb-util-dev libxcb-util0-dev libxcb-xf86dri0-dev libxcb-xfixes0-dev libxcb-xinerama0-dev libxcb-xinput-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-xtest0-dev libxcb-xv0-dev libxcb-xvmc0-dev libxcb1-dev
 	sudo apt-get -y -qq install wayland-protocols wlr-randr wmenu xwayland
 	sudo apt-get -y -qq install fonts-agave fonts-dejavu-core fonts-dejavu-mono fonts-droid-fallback fonts-freefont-ttf fonts-hack fonts-hack-otf fonts-hack-ttf fonts-hack-web fonts-lato fonts-liberation fonts-liberation-sans-narrow fonts-noto-mono fonts-urw-base35 foot
+	sudo apt-get -y -qq install xdg-desktop-portal xdg-desktop-portal-wlr pipewire wireplumber
 
 # vi: set ft=make ts=2 sw=2: #
 

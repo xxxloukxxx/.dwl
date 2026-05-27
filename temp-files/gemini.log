@@ -1194,7 +1194,11 @@ Comment tester dans OBS ?
 
     En la sélectionnant, une fenêtre contextuelle (gérée par le portail) va s'ouvrir pour vous demander l'autorisation de partager votre écran ou une fenêtre spécifique. Une fois acceptée, la capture s'affichera instantanément.
 
-systemctl --user stop xdg-desktop-portalsystemctl --user stop xdg-desktop-portal-wlrsystemctl --user start xdg-desktop-portal
+systemctl --user stop xdg-desktop-portal
+
+systemctl --user stop xdg-desktop-portal-wlr
+
+systemctl --user start xdg-desktop-portal
 
 Oups ! Attention, il y a une petite erreur de syntaxe dans votre commande : les deux premières commandes ont été collées ensemble (xdg-desktop-portalsystemctl).
 

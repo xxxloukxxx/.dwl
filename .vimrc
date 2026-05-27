@@ -38,10 +38,18 @@ set history=5000
 " set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 " set clipboard=unnamedplus
 if has('clipboard') && exists('$DISPLAY')
-  set clipboard=unnamedplus
+  set clipboard+=unnamedplus
 else
-  set clipboard=autoselectplus
+  set clipboard+=autoselectplus
 endif
+
+if executable('wl-copy')
+  " Définit comment Vim doit copier
+  let &clipboard = 'unnamedplus'
+  " Force l'utilisation de wl-copy pour l'envoi vers le système
+  autocmd TextYankPost * if v:event.operator == 'y' | call system('wl-copy', getreg('"')) | endif
+endif
+
 set shortmess+=I
 set nofoldenable
 if !isdirectory($HOME."/.vim")

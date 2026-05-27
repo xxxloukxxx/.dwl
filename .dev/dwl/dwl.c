@@ -892,13 +892,13 @@ cleanup(void)
 	xwayland = NULL;
 #endif
 	/* Stop systemd target */
-	if (fork() == 0) {
-		setsid();
-		execvp("systemctl", (char *const[]) {
-			"systemctl", "--user", "stop", "dwl-session.target", NULL
-		});
-		exit(1);
-	}
+	/* if (fork() == 0) { */
+	/* 	setsid(); */
+	/* 	execvp("systemctl", (char *const[]) { */
+	/* 		"systemctl", "--user", "stop", "dwl-session.target", NULL */
+	/* 	}); */
+	/* 	exit(1); */
+	/* } */
 
 	wl_display_destroy_clients(dpy);
 
@@ -1877,21 +1877,21 @@ handlesig(int signo)
 #else
 		while (waitpid(-1, NULL, WNOHANG) > 0);
 #endif
-		pid_t pid, *p, *lim;
-		while ((pid = waitpid(-1, NULL, WNOHANG)) > 0) {
-			if (pid == child_pid)
-				child_pid = -1;
-			if (!(p = autostart_pids))
-				continue;
-			lim = &p[autostart_len];
-
-			for (; p < lim; p++) {
-				if (*p == pid) {
-					*p = -1;
-					break;
-				}
-			}
-		}
+		/* pid_t pid, *p, *lim; */
+		/* while ((pid = waitpid(-1, NULL, WNOHANG)) > 0) { */
+		/* 	if (pid == child_pid) */
+		/* 		child_pid = -1; */
+		/* 	if (!(p = autostart_pids)) */
+		/* 		continue; */
+		/* 	lim = &p[autostart_len]; */
+        /*  */
+		/* 	for (; p < lim; p++) { */
+		/* 		if (*p == pid) { */
+		/* 			*p = -1; */
+		/* 			break; */
+		/* 		} */
+		/* 	} */
+		/* } */
 	} else if (signo == SIGINT || signo == SIGTERM) {
 		quit(NULL);
 	}
@@ -2581,9 +2581,9 @@ run(char *startup_cmd)
 		waitpid(import_pid, NULL, 0);
 		
 		/* Second: start target */
-		execvp("systemctl", (char *const[]) {
-			"systemctl", "--user", "start", "dwl-session.target", NULL
-		});
+		/* execvp("systemctl", (char *const[]) { */
+		/* 	"systemctl", "--user", "start", "dwl-session.target", NULL */
+		/* }); */
 		
 		exit(1);
 	}
@@ -2596,15 +2596,35 @@ run(char *startup_cmd)
 	/* Now that the socket exists and the backend is started, run the startup command */
 	autostartexec();
 	if (startup_cmd) {
+		int piperw[2];
+		if (pipe(piperw) < 0)
+			die("startup: pipe:");
 		if ((child_pid = fork()) < 0)
 			die("startup: fork:");
 		if (child_pid == 0) {
-			close(STDIN_FILENO);
 			setsid();
+			dup2(piperw[0], STDIN_FILENO);
+			close(piperw[0]);
+			close(piperw[1]);
 			execl("/bin/sh", "/bin/sh", "-c", startup_cmd, NULL);
 			die("startup: execl:");
 		}
+		dup2(piperw[1], STDOUT_FILENO);
+		close(piperw[1]);
+		close(piperw[0]);
+		/* if ((child_pid = fork()) < 0) */
+		/* 	die("startup: fork:"); */
+		/* if (child_pid == 0) { */
+		/* 	close(STDIN_FILENO); */
+		/* 	setsid(); */
+		/* 	execl("/bin/sh", "/bin/sh", "-c", startup_cmd, NULL); */
+		/* 	die("startup: execl:"); */
+		/* } */
 	}
+	/* Mark stdout as non-blocking to avoid people who does not close stdin
+	 * nor consumes it in their startup script getting dwl frozen */
+	if (fd_set_nonblock(STDOUT_FILENO) < 0)
+		close(STDOUT_FILENO);
 
 	drawbars();
 

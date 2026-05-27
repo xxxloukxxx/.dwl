@@ -5,7 +5,7 @@
 static const int sloppyfocus = 0;               /* focus follows mouse */
 static const int bypass_surface_visibility = 0; /* 1 means idle inhibitors will disable idle tracking even if it's
                                                    surface isn't visible  */
-static const unsigned int borderpx = 2;         /* border pixel of windows */
+static const unsigned int borderpx = 3;         /* border pixel of windows */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int showsystray = 1;               /* 0 means no systray */
 static const int showbar = 1;                   /* 0 means no bar */
@@ -17,8 +17,8 @@ static const float rootcolor[] = COLOR(0x000000ff);
 static const float fullscreen_bg[] = { 0.1f, 0.1f, 0.1f, 1.0f }; /* You can also use glsl colors */
 static uint32_t colors[][3] = {
   /*               fg          bg          border    */
-  [SchemeNorm] = { 0xbbbbbbff, 0x222222ff, 0x444444ff },
-  [SchemeSel] = { 0xeeeeeeff, 0x005577ff, 0x005577ff },
+  [SchemeNorm] = { 0xbbbbbbff, 0x333333ff, 0x444444ff },
+  [SchemeSel] = { 0xddddddff, 0x005577ff, 0x005577ff },
   [SchemeUrg] = { 0, 0, 0x770000ff },
 };
 
@@ -53,6 +53,14 @@ static const Env envs[] = {
 /* Autostart */
 static const char* const autostart[] = {
   // "foot", NULL,
+  "/usr/bin/systemctl",
+  "--user",
+  "start",
+  "xdg-desktop-portal",
+  "xdg-desktop-portal-wlr",
+  "pipewire",
+  "wireplumber",
+  NULL,
   // "wbg", "/path/to/your/image", NULL,
   NULL /* terminate */
 };

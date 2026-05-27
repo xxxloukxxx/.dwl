@@ -322,7 +322,7 @@ let g:yankring_window_use_horiz = 1
 let g:yankring_window_use_bottom = 1
 let g:yankring_window_height = 16
 let g:yankring_history_file = '.yankring-history'
-nnoremap <silent> <leader>p :YRShow<CR>
+nnoremap <silent> <leader><leader>p :YRShow<CR>
 " }}}
 
 " }}}

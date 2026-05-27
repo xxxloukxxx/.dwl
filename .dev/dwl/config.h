@@ -50,21 +50,6 @@ static const Env envs[] = {
   { "_JAVA_AWT_WM_NONREPARENTING", "1" },         //
 };
 
-/* Autostart */
-static const char* const autostart[] = {
-  // "foot", NULL,
-  "/usr/bin/systemctl",
-  "--user",
-  "start",
-  "xdg-desktop-portal",
-  "xdg-desktop-portal-wlr",
-  "pipewire",
-  "wireplumber",
-  NULL,
-  // "wbg", "/path/to/your/image", NULL,
-  NULL /* terminate */
-};
-
 /* NOTE: ALWAYS keep a rule declared even if you don't use rules (e.g leave at
  * least one example) */
 static const Rule rules[] = {

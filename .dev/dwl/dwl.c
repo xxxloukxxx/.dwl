@@ -283,7 +283,6 @@ static void arrange(Monitor *m);
 static void arrangelayer(Monitor *m, struct wl_list *list,
 		struct wlr_box *usable_area, int exclusive);
 static void arrangelayers(Monitor *m);
-static void autostartexec(void);
 static void axisnotify(struct wl_listener *listener, void *data);
 static bool baracceptsinput(struct wlr_scene_buffer *buffer, double *sx, double *sy);
 static void bufdestroy(struct wlr_buffer *buffer);
@@ -488,9 +487,6 @@ static struct wlr_xwayland *xwayland;
 static xcb_atom_t netatom[NetLast];
 #endif
 
-static pid_t *autostart_pids;
-static size_t autostart_len;
-
 /* configuration, allows nested code to access above variables */
 #include "config.h"
 
@@ -647,27 +643,6 @@ arrangelayers(Monitor *m)
 			client_notify_enter(l->layer_surface->surface, wlr_seat_get_keyboard(seat));
 			return;
 		}
-	}
-}
-
-void
-autostartexec(void) {
-	const char *const *p;
-	size_t i = 0;
-
-	/* count entries */
-	for (p = autostart; *p; autostart_len++, p++)
-		while (*++p);
-
-	autostart_pids = calloc(autostart_len, sizeof(pid_t));
-	for (p = autostart; *p; i++, p++) {
-		if ((autostart_pids[i] = fork()) == 0) {
-			setsid();
-			execvp(*p, (char *const *)p);
-			die("dwl: execvp %s:", *p);
-		}
-		/* skip arguments */
-		while (*++p);
 	}
 }
 
@@ -885,31 +860,11 @@ checkidleinhibitor(struct wlr_surface *exclude)
 void
 cleanup(void)
 {
-	size_t i;
-
 #ifdef XWAYLAND
 	wlr_xwayland_destroy(xwayland);
 	xwayland = NULL;
 #endif
-	/* Stop systemd target */
-	/* if (fork() == 0) { */
-	/* 	setsid(); */
-	/* 	execvp("systemctl", (char *const[]) { */
-	/* 		"systemctl", "--user", "stop", "dwl-session.target", NULL */
-	/* 	}); */
-	/* 	exit(1); */
-	/* } */
-
 	wl_display_destroy_clients(dpy);
-
-	/* kill child processes */
-	for (i = 0; i < autostart_len; i++) {
-		if (0 < autostart_pids[i]) {
-			kill(autostart_pids[i], SIGTERM);
-			waitpid(autostart_pids[i], NULL, 0);
-		}
-	}
-
 	if (child_pid > 0) {
 		kill(-child_pid, SIGTERM);
 		waitpid(child_pid, NULL, 0);
@@ -1639,8 +1594,8 @@ drawbar(Monitor *m)
 				urg & 1 << i);
 		x += w;
 	}
-	/* w = TEXTW(m, m->ltsymbol); */
-	/* drwl_setscheme(m->drw, colors[SchemeNorm]); */
+	w = TEXTW(m, m->ltsymbol);
+	drwl_setscheme(m->drw, colors[SchemeNorm]);
 	/* x = drwl_text(m->drw, x, 0, w, m->b.height, m->lrpad / 2, m->ltsymbol, 0); */
 
 	if ((w = m->b.width - (tw + x + traywidth)) > m->b.height) {
@@ -1877,21 +1832,6 @@ handlesig(int signo)
 #else
 		while (waitpid(-1, NULL, WNOHANG) > 0);
 #endif
-		/* pid_t pid, *p, *lim; */
-		/* while ((pid = waitpid(-1, NULL, WNOHANG)) > 0) { */
-		/* 	if (pid == child_pid) */
-		/* 		child_pid = -1; */
-		/* 	if (!(p = autostart_pids)) */
-		/* 		continue; */
-		/* 	lim = &p[autostart_len]; */
-        /*  */
-		/* 	for (; p < lim; p++) { */
-		/* 		if (*p == pid) { */
-		/* 			*p = -1; */
-		/* 			break; */
-		/* 		} */
-		/* 	} */
-		/* } */
 	} else if (signo == SIGINT || signo == SIGTERM) {
 		quit(NULL);
 	}
@@ -2562,31 +2502,18 @@ run(char *startup_cmd)
 	setenv("WAYLAND_DISPLAY", socket, 1);
 	for (size_t i = 0; i < LENGTH(envs); i++)
 		setenv(envs[i].variable, envs[i].value, 1);
-
-	/* Import environment variables then start systemd target */
-	if (fork() == 0) {
-		setsid();
-		
-		/* First: import environment variables */
-		pid_t import_pid = fork();
-		if (import_pid == 0) {
-			execvp("systemctl", (char *const[]) {
-				"systemctl", "--user", "import-environment", 
-				"DISPLAY", "WAYLAND_DISPLAY", "XDG_CURRENT_DESKTOP" ,NULL
-			});
-			exit(1);
-		}
-		
-		/* Wait for import to complete */
-		waitpid(import_pid, NULL, 0);
-		
-		/* Second: start target */
-		/* execvp("systemctl", (char *const[]) { */
-		/* 	"systemctl", "--user", "start", "dwl-session.target", NULL */
-		/* }); */
-		
+	/* First: import environment variables */
+	pid_t import_pid = fork();
+	if (import_pid == 0) {
+		execvp("systemctl", (char *const[]) {
+			"systemctl", "--user", "import-environment", 
+			"DISPLAY", "WAYLAND_DISPLAY", "XDG_CURRENT_DESKTOP" ,NULL
+		});
 		exit(1);
 	}
+		
+	/* Wait for import to complete */
+	waitpid(import_pid, NULL, 0);
 
 	/* Start the backend. This will enumerate outputs and inputs, become the DRM
 	 * master, etc */
@@ -2594,37 +2521,16 @@ run(char *startup_cmd)
 		die("startup: backend_start");
 
 	/* Now that the socket exists and the backend is started, run the startup command */
-	autostartexec();
 	if (startup_cmd) {
-		int piperw[2];
-		if (pipe(piperw) < 0)
-			die("startup: pipe:");
 		if ((child_pid = fork()) < 0)
 			die("startup: fork:");
 		if (child_pid == 0) {
+			close(STDIN_FILENO);
 			setsid();
-			dup2(piperw[0], STDIN_FILENO);
-			close(piperw[0]);
-			close(piperw[1]);
 			execl("/bin/sh", "/bin/sh", "-c", startup_cmd, NULL);
 			die("startup: execl:");
 		}
-		dup2(piperw[1], STDOUT_FILENO);
-		close(piperw[1]);
-		close(piperw[0]);
-		/* if ((child_pid = fork()) < 0) */
-		/* 	die("startup: fork:"); */
-		/* if (child_pid == 0) { */
-		/* 	close(STDIN_FILENO); */
-		/* 	setsid(); */
-		/* 	execl("/bin/sh", "/bin/sh", "-c", startup_cmd, NULL); */
-		/* 	die("startup: execl:"); */
-		/* } */
 	}
-	/* Mark stdout as non-blocking to avoid people who does not close stdin
-	 * nor consumes it in their startup script getting dwl frozen */
-	if (fd_set_nonblock(STDOUT_FILENO) < 0)
-		close(STDOUT_FILENO);
 
 	drawbars();
 

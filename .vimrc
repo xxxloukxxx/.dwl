@@ -42,14 +42,6 @@ if has('clipboard') && exists('$DISPLAY')
 else
   set clipboard+=autoselectplus
 endif
-
-if executable('wl-copy')
-  " Définit comment Vim doit copier
-  let &clipboard = 'unnamedplus'
-  " Force l'utilisation de wl-copy pour l'envoi vers le système
-  autocmd TextYankPost * if v:event.operator == 'y' | call system('wl-copy', getreg('"')) | endif
-endif
-
 set shortmess+=I
 set nofoldenable
 if !isdirectory($HOME."/.vim")

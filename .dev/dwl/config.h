@@ -207,7 +207,7 @@ static const Key keys[] = {
 
   { MODKEY | WLR_MODIFIER_SHIFT, XKB_KEY_Return, zoom, { 0 } }, //
 
-  { MODKEY, XKB_KEY_f, setlayout, { 0 } },                       //
+  { MODKEY, XKB_KEY_f, togglefullscreen, { 0 } },                        //
   { MODKEY, XKB_KEY_space, togglefloating, { 0 } },              //
   { MODKEY | WLR_MODIFIER_SHIFT, XKB_KEY_C, killclient, { 0 } }, //
 

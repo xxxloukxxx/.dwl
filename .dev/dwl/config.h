@@ -178,8 +178,8 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 
 /* commands */
 static const char* termcmd[] = { "foot", NULL };
-static const char* menucmd[] = { "wmenu-run", NULL };
-static const char* dmenucmd[] = { "wmenu", NULL };
+static const char* menucmd[] = { "dmenu_run", NULL };
+static const char* dmenucmd[] = { "dmenu", NULL };
 static const char* dpowercmd[] = { "dpower", NULL };
 static const char* upvol[] = { "vol.sh", "up", NULL };
 static const char* downvol[] = { "vol.sh", "dn", NULL };

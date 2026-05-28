@@ -4,6 +4,7 @@ set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
 
 @config:
 	rsync -aqh .vimrc ~/
+	rsync -aqh .wlinitrc ~/
 	rsync -aqh .zshrc ~/
 	rsync -aqh .gitconfig ~/
 	rsync -aqh .config/ ~/.config/

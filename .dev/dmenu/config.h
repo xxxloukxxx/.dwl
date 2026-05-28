@@ -10,8 +10,8 @@ static const char* fonts[]               = { "agave:size=14" };
 static const char* prompt                = NULL; /* -p  option; prompt to the left of input field */
 static const char* colors[SchemeLast][2] = {
     /*     fg         bg       */
-    [SchemeNorm]          = { "#666666", "#000000" },
-    [SchemeSel]           = { "#ffffff", "#090c2c" },
+    [SchemeNorm]          = { "#bbbbbb", "#333333" },
+    [SchemeSel]           = { "#dddddd", "#005577" },
     [SchemeOut]           = { "#000000", "#392c5c" },
     [SchemeSelHighlight]  = { "#ffffff", "#004c00" },
     [SchemeNormHighlight] = { "#686868", "#002c00" },

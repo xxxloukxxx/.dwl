@@ -2,7 +2,7 @@
 static const Block blocks[] = {
   /*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
   { "", "/usr/bin/vol.sh", 5, 5 },
-  { "", "date '+%H:%M'", 5, 5 },
+  { "", "date '+%d-%m %H:%M'", 5, 5 },
 
   /* Updates whenever "pkill -SIGRTMIN+10 someblocks" is ran */
   /* {"", "date '+%b %d (%a) %I:%M%p'",					0,		10}, */

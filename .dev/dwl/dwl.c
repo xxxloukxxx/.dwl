@@ -1572,7 +1572,7 @@ drawbar(Monitor *m)
 	if (m == selmon) { /* status is only drawn on selected monitor */
 		drwl_setscheme(m->drw, colors[SchemeNorm]);
 		tw = TEXTW(m, stext) - m->lrpad + 2; /* 2px right padding */
-		drwl_text(m->drw, m->b.width - (tw + traywidth), 0, tw, m->b.height, 0, stext, 0);
+		drwl_text(m->drw, m->b.width - (tw + traywidth), 2, tw, m->b.height, 0, stext, 0);
 	}
 
 	wl_list_for_each(c, &clients, link) {
@@ -1587,7 +1587,7 @@ drawbar(Monitor *m)
 	for (i = 0; i < LENGTH(tags); i++) {
 		w = TEXTW(m, tags[i]);
 		drwl_setscheme(m->drw, colors[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
-		drwl_text(m->drw, x, 0, w, m->b.height, m->lrpad / 2, tags[i], urg & 1 << i);
+		drwl_text(m->drw, x, 2, w, m->b.height, m->lrpad / 2, tags[i], urg & 1 << i);
 		if (occ & 1 << i)
 			drwl_rect(m->drw, x + boxs, boxs, boxw, boxw,
 				m == selmon && c && c->tags & 1 << i,
@@ -1601,7 +1601,7 @@ drawbar(Monitor *m)
 	if ((w = m->b.width - (tw + x + traywidth)) > m->b.height) {
 		if (c) {
 			drwl_setscheme(m->drw, colors[m == selmon ? SchemeSel : SchemeNorm]);
-			drwl_text(m->drw, x, 0, w, m->b.height, m->lrpad / 2, client_get_title(c), 0);
+			drwl_text(m->drw, x, 2, w, m->b.height, m->lrpad / 2, client_get_title(c), 0);
 			if (c && c->isfloating)
 				drwl_rect(m->drw, x + boxs, boxs, boxw, boxw, 0, 0);
 		} else {

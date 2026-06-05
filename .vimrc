@@ -172,7 +172,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | 
 
 call plug#begin()
 Plug 'romainl/vim-cool'
-Plug 'vim-scripts/YankRing.vim'
+Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'arecarn/crunch.vim'
 Plug 'arecarn/vim-selection'
 Plug 'chrisbra/csv.vim'

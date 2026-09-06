@@ -21,6 +21,7 @@ set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
 	make -C .dev/dmenu clean
 
 @packages:
+	sudo rsync -avh .apt/ /etc/apt/
 	sudo apt-get -y -qq update && sudo apt-get -y -qq full-upgrade
 	sudo apt-get -y -qq install libcairo2-dev libdbus-1-dev libfcft-dev libinput-dev libpango1.0-dev libpixman-1-dev libpulse-dev libpulse-dev libtllist-dev libwayland-dev libwlroots-0.18-dev libxkbcommon-dev
 	sudo apt-get -y -qq install libxcb-composite0-dev libxcb-cursor-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-dri2-0-dev libxcb-dri3-dev libxcb-errors-dev libxcb-ewmh-dev libxcb-glx0-dev libxcb-icccm4-dev
@@ -30,6 +31,7 @@ set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
 	sudo apt-get -y -qq install wayland-protocols wlr-randr xwayland wl-clipboard
 	sudo apt-get -y -qq install fonts-agave fonts-dejavu-core fonts-dejavu-mono fonts-droid-fallback fonts-freefont-ttf fonts-hack fonts-hack-otf fonts-hack-ttf fonts-hack-web fonts-lato fonts-liberation fonts-liberation-sans-narrow fonts-noto-mono fonts-urw-base35 foot
 	sudo apt-get -y -qq install xdg-desktop-portal xdg-desktop-portal-wlr pipewire wireplumber
+	sudo apt-get -y -qq install vim-gtk3 -t testing
 
 # vi: set ft=make ts=2 sw=2: #
 
